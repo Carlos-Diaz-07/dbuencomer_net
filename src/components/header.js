@@ -1,34 +1,59 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
+import logo from "../images/logo.svg";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+  <nav id="nav" class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <Link class="navbar-item" href="https://bulma.io">
+        <StaticImage
+          src="https://bulma.io/images/bulma-logo.png"
+          width="112"
+          height="28"
+        />
+      </Link>
+
+      <a
+        role="button"
+        class="navbar-burger"
+        aria-label="menu"
+        aria-expanded="false"
+        data-target="navbarBasicExample"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
-  </header>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <Link class="navbar-item">Home</Link>
+
+        <Link class="navbar-item">Documentation</Link>
+      </div>
+      <div className="circle">
+      <img
+          src={logo}
+          width="112"
+          height="28"
+        />
+      </div>
+
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="buttons">
+            <a class="button is-primary">
+              <strong>Sign up</strong>
+            </a>
+            <a class="button is-light">Log in</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
 )
 
 Header.propTypes = {
