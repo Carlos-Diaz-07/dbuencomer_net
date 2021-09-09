@@ -3,7 +3,7 @@ import { useState } from "react"
 import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import logo from "../images/logo-logo.svg"
-import { StaticImage } from "gatsby-plugin-image"
+import logoBLetters from "../images/logo-b-letters.svg"
 
 function Header() {
   const [menuState, setMenuState] = useState("not-active")
@@ -19,15 +19,16 @@ function Header() {
   return (
     <nav id="nav" class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <Link class="navbar-item" href="/">
-          <img id="logo-left" src={logo} width="100" height="100" />
-          <StaticImage
-            src="../images/logo-b-letters.svg"
-            id="logo-b-letters"
-            width="300"
-            height="38"
+        <a href="/home" class="navbar-item" id="nav-logo">
+          <img
+            id="logo-left"
+            className="is-hidden-desktop"
+            src={logo}
+            width="100"
+            height="100"
           />
-        </Link>
+          <img src={logoBLetters} id="logo-b-letters" />
+        </a>
 
         <a
           onClick={menuActive}
@@ -44,19 +45,30 @@ function Header() {
         </a>
       </div>
 
-      <div id="navbarBasicExample" class={'navbar-menu ' + menuState}>
+      <div id="navbarBasicExample" class={"navbar-menu " + menuState}>
         <div class="navbar-start"></div>
-        <div className={'circle ' + menuState + ' is-hidden-mobile is-hidden-tablet-only'}>
+        <div
+          className={
+            "nav-circle " +
+            menuState +
+            " is-hidden-mobile is-hidden-tablet-only"
+          }
+        >
           <img src={logo} width="140" height="135" />
         </div>
 
         <div class="navbar-end">
           <div class="navbar-item has-text-centered">
-            <Link class="navbar-item has-text-weight-bold brown">Menu</Link>
-            <Link class="navbar-item has-text-weight-bold brown">
+            <Link to="/menu" class="navbar-item has-text-weight-bold brown">
+              Menu
+            </Link>
+            <Link to="/home#map" class="navbar-item has-text-weight-bold brown">
               Encuentranos
             </Link>
-            <Link class="navbar-item has-text-weight-bold brown">
+            <Link
+              to="/home#contact"
+              class="navbar-item has-text-weight-bold brown"
+            >
               Contact Us
             </Link>
           </div>

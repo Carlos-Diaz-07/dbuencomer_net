@@ -27,10 +27,10 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div>
         <main>{children}</main>
-        <footer className="footer">
-          © {new Date().getFullYear()}, Built with
+        <footer className="footer has-text-centered">
+          © {new Date().getFullYear()}, Built by
           {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
+          <a href="https://www.gatsbyjs.com">Carlos Diaz</a>
         </footer>
       </div>
     </>
