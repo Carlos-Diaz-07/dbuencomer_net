@@ -19,7 +19,7 @@ function Header() {
   return (
     <nav id="nav" class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
-        <a href="/home" class="navbar-item" id="nav-logo">
+        <a href="/" class="navbar-item" id="nav-logo">
           <img
             id="logo-left"
             className="is-hidden-desktop"
@@ -62,11 +62,11 @@ function Header() {
             <Link to="/menu" class="navbar-item has-text-weight-bold brown">
               Menu
             </Link>
-            <Link to="/home#map" class="navbar-item has-text-weight-bold brown">
+            <Link to="/#map" class="navbar-item has-text-weight-bold brown">
               Encuentranos
             </Link>
             <Link
-              to="/home#contact"
+              to="/#contact"
               class="navbar-item has-text-weight-bold brown"
             >
               Contact Us
