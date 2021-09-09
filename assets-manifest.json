@@ -1,4 +1,5 @@
 {
   "main.js": "render-page.js",
-  "render-page.js.map": "render-page.js.map"
+  "render-page.js.map": "render-page.js.map",
+  "static/logo-b-letters.svg": "static/logo-b-letters-b223796f84297023be564c5afe83d60b.svg"
 }
