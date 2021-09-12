@@ -59,13 +59,22 @@ function Header() {
 
         <div class="navbar-end">
           <div class="navbar-item has-text-centered">
-            <Link to="/menu" class="navbar-item has-text-weight-bold brown">
+            <Link
+              onClick={menuActive}
+              to="/menu"
+              class="navbar-item has-text-weight-bold brown"
+            >
               Menu
             </Link>
-            <Link to="/#map" class="navbar-item has-text-weight-bold brown">
+            <Link
+              onClick={menuActive}
+              to="/#map"
+              class="navbar-item has-text-weight-bold brown"
+            >
               Encuentranos
             </Link>
             <Link
+              onClick={menuActive}
               to="/#contact"
               class="navbar-item has-text-weight-bold brown"
             >
