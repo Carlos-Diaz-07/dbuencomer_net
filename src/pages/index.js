@@ -24,7 +24,10 @@ const IndexPage = () => (
       </div>
     </div>
     <div className="columns section" id="map">
-      <div id="map-text" className="column is-flex-direction-column has-text-centered is-one-quarter">
+      <div
+        id="map-text"
+        className="column is-flex-direction-column has-text-centered is-one-quarter"
+      >
         <h1 className="title">Titulo</h1>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -40,6 +43,7 @@ const IndexPage = () => (
       </div>
       <div className="map-map column is-three-quarters">
         <iframe
+          title="map"
           id="map-map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3522.9530686832904!2d-15.475245584703776!3d27.99533221938326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc40973e7f7f940b%3A0x53d3bc29a9f1b888!2sD%C2%B4Buen%20Comer%2C%20comidas%20caseras!5e0!3m2!1sen!2suk!4v1630753832876!5m2!1sen!2suk"
           width="100%"
