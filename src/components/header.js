@@ -21,16 +21,18 @@ function Header() {
       <div class="navbar-brand">
         <a href="/" class="navbar-item" id="nav-logo">
           <img
+            alt="logo"
             id="logo-left"
             className="is-hidden-desktop"
             src={logo}
             width="100"
             height="100"
           />
-          <img src={logoBLetters} id="logo-b-letters" />
+          <img alt="logo" src={logoBLetters} id="logo-b-letters" />
         </a>
 
         <a
+          tabIndex={0}
           onClick={menuActive}
           role="button"
           id="burger"
@@ -54,7 +56,7 @@ function Header() {
             " is-hidden-mobile is-hidden-tablet-only"
           }
         >
-          <img src={logo} width="140" height="135" />
+          <img src={logo} width="140" height="135" alt="logo" />
         </div>
 
         <div class="navbar-end">
